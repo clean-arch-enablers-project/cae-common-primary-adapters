@@ -1,4 +1,4 @@
-# ``✔️`` cae-common-primary-adapters
+# ✔️ cae-common-primary-adapters
 ☕ Java & Kotlin edition
 
 <br>
