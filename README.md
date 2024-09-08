@@ -103,7 +103,7 @@ After declaring and registering your commands in the ``CommandRepository``, you 
 public class CaeCli {
 
     public static void main(String[] args) {
-        CaeCliBootstrapSettings.run();
+        CaeCliBootstrapSettings.run(); //This line serves as a simple wrapper for the command registration phase and is arbitrary.
         CommandController.serve(CommandRequest.of(args));
     }
 
