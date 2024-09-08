@@ -37,8 +37,6 @@ This component provides a framework for building CLI tools. You can declare comm
 With this script the CLI app would be set to display the name as ``cae-cli``, its version as ``1.0.0``. The commands accepted would be ``NewFunctionUseCaseCommand``, ``NewConsumerUseCaseCommand``, ``NewSupplierUseCaseCommand``, ``NewRunnableUseCaseCommand``, ``NewProjectCommand``, ``RotateToMonolayerCommand``.
 
 ```java
-package com.cae.cli.bootstrap_settings;
-
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class CaeCliBootstrapSettings {
 
@@ -67,10 +65,6 @@ Whenever the command gets executed, its flow is whatever is inside its ``applyIn
 
 
 ```java
-package com.cae.cli.commands.projects;
-
-<imports ...>
-
 public class NewProjectCommand extends Command {
 
     public NewProjectCommand() {
