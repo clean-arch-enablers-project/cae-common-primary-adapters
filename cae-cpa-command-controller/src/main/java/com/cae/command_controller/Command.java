@@ -21,6 +21,7 @@ public abstract class Command {
     public void execute(CommandRequest commandRequest){
         this.extractActualParameterValuesFrom(commandRequest);
         this.runParameterValidations();
+        this.logParametersExtracted();
         this.applyInternalLogic();
     }
 
@@ -45,6 +46,26 @@ public abstract class Command {
                     CommandMessageHandler.provideWarningMessage("no parameter named '" + parameterKey + "' for the '" + this.getName() + "' command.");
             });
         }
+    }
+
+    private void logParametersExtracted() {
+        if (!this.commandParameters.isEmpty()){
+            var message = new StringBuilder("Parameters accepted:\n");
+            this.commandParameters.forEach((key, definitions) -> message.append("    | ---- '")
+                    .append(key)
+                    .append("': ")
+                    .append(definitions.isFlag()? this.handleLogForFlag(definitions) : this.handleLogForDefaultField(definitions))
+                    .append("\n"));
+            CommandMessageHandler.provideInfoMessage(message.toString());
+        }
+    }
+
+    private String handleLogForFlag(CommandParameterDefinitions definitions) {
+        return definitions.isPresent()? "true" : "false";
+    }
+
+    private String handleLogForDefaultField(CommandParameterDefinitions definitions) {
+        return definitions.isPresent()? definitions.getActualValue() : "(not provided)";
     }
 
     private Optional<CommandParameterDefinitions> getParameterDefinitionsByKey(String parameterKey){
