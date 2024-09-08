@@ -39,8 +39,6 @@ With this script the CLI app would be set to display the name as ``cae-cli``, it
 ```java
 package com.cae.cli.bootstrap_settings;
 
-<imports ...>
-
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class CaeCliBootstrapSettings {
 
