@@ -93,3 +93,19 @@ public class NewProjectCommand extends Command {
 }
 
 ```
+
+#### Dispatching for the Main class of the CLI app
+
+After declaring and registering your commands in the ``CommandRepository``, you can dispatch them by following the script below in the main class of your CLI application.
+
+
+```java
+public class CaeCli {
+
+    public static void main(String[] args) {
+        CaeCliBootstrapSettings.run();
+        CommandController.serve(CommandRequest.of(args));
+    }
+
+}
+```
