@@ -32,7 +32,7 @@ This component provides a framework for building CLI tools. You can declare comm
 
 ### ✍️ Examples
 
-#### Registering the name and the version of the CLI tool to display and the commands to accept.
+#### 💡 Registering the name and the version of the CLI tool to display and the commands to accept.
 
 With this script the CLI app would be set to display the name as ``cae-cli``, its version as ``1.0.0``. The commands accepted would be ``NewFunctionUseCaseCommand``, ``NewConsumerUseCaseCommand``, ``NewSupplierUseCaseCommand``, ``NewRunnableUseCaseCommand``, ``NewProjectCommand``, ``RotateToMonolayerCommand``.
 
@@ -56,7 +56,7 @@ public class CaeCliBootstrapSettings {
 }
 ```
 
-#### Declaring a command
+#### 💡 Declaring a command
 
 With this script the ``NewProjectCommand`` class becomes a ``Command``. Within its constructor 4 command parameters are declared: ``monolayer`` (a flag, optional), ``artifactId`` (required parameter), ``groupId`` (required parameter) and ``caeVersion`` (required parameter).
 
@@ -94,7 +94,7 @@ public class NewProjectCommand extends Command {
 
 ```
 
-#### Dispatching for the Main class of the CLI app
+#### 💡 Dispatching for the Main class of the CLI app
 
 After declaring and registering your commands in the ``CommandRepository``, you can dispatch them by following the script below in the main class of your CLI application.
 
