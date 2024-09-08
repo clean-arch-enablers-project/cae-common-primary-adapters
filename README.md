@@ -5,7 +5,7 @@
 
 Welcome to the open-source CAE Common Primary Adapters repository! This SDK module is designed to provide a collection of commonly used primary adapters — components that trigger the execution of use cases. It serves as a convenient starting point for creating these software components, offering seamless integration with other CAE components by default. 
 
-In this repository, each folder corresponds to a specific common primary adapter. All of them share the prefix 'cae-cpa,' which stands for 'CAE (Clean Arch Enablers) Common Primary Adapters,' followed by the name of the actual component.
+In this repository, each folder corresponds to a specific common primary adapter. All of them share the prefix 'cae-cpa', which stands for 'CAE (Clean Arch Enablers) Common Primary Adapters', followed by the name of the actual component.
 
 <br>
 
